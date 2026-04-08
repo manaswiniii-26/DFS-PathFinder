@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Romania DFS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>DFS Pathfinder</h1>
+    <div class="controls">
+      <div class="input-row">
+        <select id="start"></select>
+        <select id="end"></select>
+        <button id="startBtn">INITIATE DFS</button>
+        <button id="resetBtn" class="secondary">RESET MAP</button>
+      </div>
+      <div class="legend">
+        <div class="item"><span class="dot start"></span> Start</div>
+        <div class="item"><span class="dot goal"></span> Goal</div>
+        <div class="item"><span class="dot visited"></span> Explored</div>
+        <div class="item"><span class="dot backtrack"></span> Backtrack</div>
+        <div class="item"><span class="dot path"></span> Final Path</div>
+      </div>
+    </div>
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-label">Max Depth Reached</span>
+        <span class="stat-value" id="stat-max-depth">—</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Final Path Depth</span>
+        <span class="stat-value" id="stat-path-depth">—</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Nodes Explored</span>
+        <span class="stat-value" id="stat-nodes">—</span>
+      </div>
+    </div>
+    <div class="main">
+      <svg id="map" viewBox="0 0 950 700" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="sidebar">
+        <h3>Exploration Log</h3>
+        <ul id="visited-log"></ul>
+      </div>
+    </div>
+  </div>
+  <!-- FIXED: was 'script (1)' — missing .js extension caused ERR_FILE_NOT_FOUND -->
+  <script src="script.js"></script>
+</body>
+</html>
